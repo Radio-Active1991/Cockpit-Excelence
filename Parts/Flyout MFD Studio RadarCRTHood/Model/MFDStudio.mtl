@@ -1,0 +1,82 @@
+newmtl Case
+Kd 0.18823529411764706 0.23137254901960785 0.19607843137254902
+Ks 0.1 0.1 0.1
+Ns 15
+newmtl Trim
+Kd 0.065 0.075 0.06
+Ks 0.3 0.3 0.3
+Ns 50
+newmtl Hardware
+Kd 0.21 0.23 0.21
+Ks 0.4 0.4 0.4
+Ns 50
+newmtl Display
+Kd 1 1 1
+map_Kd Standby.png
+
+newmtl Screw
+Kd 0.018 0.022 0.026
+Ks 0.90 0.90 0.90
+Ns 100
+Pm 1.0
+Pr 0.28
+illum 2
+newmtl Knob
+Kd 0.045 0.055 0.050
+Ks 0.3 0.3 0.3
+Ns 40
+newmtl Groove
+Kd 0.003 0.004 0.004
+Ks 0.05 0.05 0.05
+Ns 10
+
+newmtl Button
+Kd 0.29 0.34 0.31
+Ks 0.35 0.35 0.35
+Ns 60
+newmtl Bezel
+Kd 0.08 0.095 0.085
+Ks 0.45 0.45 0.45
+Ns 75
+newmtl ShadeOutside
+Kd 0.23 0.27 0.23
+Ks 0.2 0.2 0.2
+Ns 45
+newmtl ShadeInside
+Kd 0.015 0.018 0.015
+Ks 0.02 0.02 0.02
+Ns 5
+newmtl Screw
+Kd 0.018 0.022 0.026
+Ks 0.9 0.9 0.9
+Ns 100
+Pm 1.0
+Pr 0.28
+newmtl ButtonTextured
+Kd 1 1 1
+Ks 0.3 0.3 0.3
+Ns 60
+map_Kd Standby.png
+
+newmtl Seal
+Kd 0.014 0.019 0.022
+Ks 0.1 0.1 0.1
+Ns 20
+
+newmtl ScrewSlot
+Kd 0.004 0.005 0.006
+Ks 0.1 0.1 0.1
+Ns 20
+
+newmtl Metal
+Kd 0.43 0.48 0.51
+Ks 0.8 0.8 0.8
+Ns 120
+
+newmtl Indicator
+Kd 0.9 0.94 0.91
+
+newmtl LampAmber
+Kd 0.085 0.052 0.01
+Ks 0.65 0.65 0.65
+Ns 100

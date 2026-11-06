@@ -1,0 +1,7 @@
+Source/
+*.zip
+*.log
+*.pdb
+**/bin/
+**/obj/
+github-auth/
