@@ -2,56 +2,81 @@
 
 Configurable cockpit displays and physical controls for **Flyout**.
 
-**Current public version:0.4.1** · **Windows x64 / .NET6 IL2CPP**
+**Current public version: 0.4.2** · **Windows x64 / .NET 6 IL2CPP**
 
-[Download](https://github.com/Radio-Active1991/Cockpit-Excelence/releases/latest) · [Wiki](https://github.com/Radio-Active1991/Cockpit-Excelence/wiki) · [Report an issue](https://github.com/Radio-Active1991/Cockpit-Excelence/issues)
+[Download](https://github.com/Radio-Active1991/Cockpit-Excelence/releases/latest) · [Wiki](https://github.com/Radio-Active1991/Cockpit-Excelence/wiki) · [SDK and examples](https://github.com/Radio-Active1991/Cockpit-Excelence/wiki/Mod-Integration-and-SDK) · [Report an issue](https://github.com/Radio-Active1991/Cockpit-Excelence/issues)
 
-Created by **Radio-Active1991** with extensive development, debugging,
+Created by **Radio-Active1991** with extensive programming, debugging,
 original-model and documentation assistance from **OpenAI ChatGPT / Codex**.
 
 ## Build your cockpit
 
--66 original instrument/control parts: MFDs, HUDs, UFCs, warning panels,
-  switches, buttons, knobs, sliders, LED values and physical number drums.
-- Aircraft-inspired styles: F/A-18, early F-16A, Gripen, Eurofighter, Tornado,
-  Soviet designs, Rafale, F-22, F-35 and JF-17.
-- Editable pages with flight, engine, grouped-fuel, stores, radar, RWR,
-  navigation and weapon information. Export/import pages between aircraft.
-- Shared bezel buttons, scrollable lists and independent F-35 display halves.
-- Configurable HUD modes, reticles, scaling, radar altitude, tapes and masks.
-- Native AP targets on LED/drums, physical target adjustment and IAS/TAS/Mach.
-- Warning outputs and tones, stall alerts, stock cockpit control actions.
-- Adjustable display budgets, required-axis polling and external-view freeze.
+- 68 original instrument/control parts: MFDs, HUDs, UFCs, warning panels,
+  buttons, switches, rotary controls, slider, LED values, real number drums
+  and gated H-pattern/ratchet shifters.
+- Styles inspired by F/A-18, early F-16A, Gripen, Eurofighter, Tornado,
+  Soviet instruments, Rafale, F-22, F-35 and JF-17.
+- Editable flight, engine, grouped-fuel, stores, radar, RWR, navigation and
+  weapon pages. Transfer pages across aircraft; share bezel shortcuts and
+  scroll long lists. F-35 halves can work independently or as one wide page.
+- Configurable HUD modes, reticles, FoV, tapes, radar-height factors and masks.
+- Per-UFC DD.DDDD/DD MM.MMM coordinates and hemisphere keys. Native AP
+  IAS/TAS/Mach targets on UFC/MFD, LED/drums and physical controls.
+- Warning rules/outputs/tones, stall alerts, supported stock actions, native
+  motor/rocket/gearbox data, gear/clutch controls and separate gear indicators.
+- Adjustable image resolution/refresh/work budgets, required-axis polling,
+  reuse of unchanged images and external-view freeze.
+- **Display SDK v1:** another mod can publish images or drawing commands into
+  a normal page widget. Three working examples and a separate SDK download.
 
-These are configurable Flyout-adapted instruments, not complete simulations
-of the reference aircraft’s avionics. Cameras/FLIR/Mi8 video are **WIP**.
+These are configurable Flyout-adapted instruments, not complete reference-
+aircraft avionics simulations. Cameras/FLIR/Mi8 video and native GPS targeting
+remain **WIP**. Cockpit scope only; airframe physics belong to their own mod.
 
 ![Actual owned part models](docs/parts-preview.png)
 
-## Install
+## Downloads and installation
 
-Download **Cockpit-Excelence-0.4.1.zip** from Releases. It contains the game
-files and installation/license notices. Install **both Mods and Parts** in
-their respective locations: [installation guide](https://github.com/Radio-Active1991/Cockpit-Excelence/wiki/Installation).
-The game Mods directory and user Parts directory are different folders.
-Preserve your layouts and aircraft. Stable part IDs and FlyoutMFD.dll remain
-unchanged despite the public rename.
+| Release asset | Contents |
+| --- | --- |
+| **Cockpit-Excelence-0.4.2.zip** | Game files, installation and license notices |
+| **Cockpit-Excelence-0.4.2-Source.zip** | Complete source, tests, model tools/assets and bilingual help |
+| **Cockpit-Excelence-0.4.2-SDK.zip** | Developer API/reference DLL, examples and build helpers |
 
-The matching **Cockpit-Excelence-0.4.1-Source.zip** contains the corresponding
-source, tests and original model tools separately. See [GPL-3.0](https://github.com/Radio-Active1991/Cockpit-Excelence/blob/main/LICENSE)
-and [source/build information](https://github.com/Radio-Active1991/Cockpit-Excelence/wiki/License-and-Source).
+Players only need the first ZIP. Install **both Mods and Parts** in their
+respective game/user folders: [installation guide](https://github.com/Radio-Active1991/Cockpit-Excelence/wiki/Installation).
+Keep layouts, UserData and aircraft saves. Stable part IDs and FlyoutMFD.dll
+remain unchanged. Do not install a second copy from the optional SDK.
+
+See [what changed](https://github.com/Radio-Active1991/Cockpit-Excelence/wiki/Release-0.4.2),
+[coordinate examples](https://github.com/Radio-Active1991/Cockpit-Excelence/wiki/Navigation-UFC-and-Autopilot),
+[shifter setup](https://github.com/Radio-Active1991/Cockpit-Excelence/wiki/Shifters-and-Gearboxes),
+[resolution/refresh](https://github.com/Radio-Active1991/Cockpit-Excelence/wiki/Performance) and
+[HUD FoV](https://github.com/Radio-Active1991/Cockpit-Excelence/wiki/HUD#adjusting-hud-fov).
+
+## For mod authors
+
+Reference the matching host assembly and register one stable source. Publish
+RGBA or bounded text/line/rectangle/ellipse commands, then let the user select
+it in **External mod content**. Normal page limits and freeze apply.
+This is render-only API v1, not a GPU-texture/camera/input callback interface.
+
+[Integration guide](https://github.com/Radio-Active1991/Cockpit-Excelence/wiki/Mod-Integration-and-SDK) ·
+[Three simple examples](https://github.com/Radio-Active1991/Cockpit-Excelence/wiki/SDK-Examples) ·
+[API contract](docs/SDK/EXTERNAL_DISPLAY_API.md)
 
 ## Verification and limits
 
-The original0.4.1 release passed7765 controlled C# checks and104 compiled
-wiring checks. A later read-only check against Flyout0.2504 resolved all841
-direct API references and13 native hooks; rebuilding produced the same DLL.
-These are offline checks, not confirmed native rendering, flight behavior
-or measured FPS improvements. Include versions, reproduction steps and a
-relevant log excerpt when reporting problems.
+0.4.2 passed8184controlled checks/12suites,586model/layout alignment checks
+and154compiled production contracts. All894direct native references and
+13existing hooks resolved on the inspected Flyout0.2504baseline.9151Unity
+proxy paths contained no known throwing stub. Source rebuild and standalone
+SDK archive checks are reported with release hashes.
 
-The external-content API and additional one-shot FLIR/GPS commands are being
-prepared in an **internal test version**; they are not part of public0.4.1.
+The SDK consumer executes only the owned managed API and examples. Offline
+checks do not establish native GPU appearance or measured FPS improvements.
+Include versions, reproduction steps and a relevant log excerpt in bug reports.
 
-No Flyout, MelonLoader or Mi8 binaries, foreign reference models or private
-development logs are included. Install the game and loader separately.
+GPL-3.0: [license](LICENSE) and [corresponding source](https://github.com/Radio-Active1991/Cockpit-Excelence/wiki/License-and-Source).
+No game, loader, Mi8 or other foreign mod binary, private development log or
+third-party reference photograph is distributed.

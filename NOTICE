@@ -1,18 +1,10 @@
-Cockpit Excelence
-Copyright (C) 2026 Radio-Active1991
+Cockpit Excelence 0.4.2
+Copyright (C) 2026 Radio-Active1991 and contributors. GPL-3.0.
+Created with extensive development, debugging, original-model and
+documentation assistance from OpenAI ChatGPT / Codex.
 
-This program is free software: you can redistribute it and/or modify it
-under the terms of the GNU General Public License version 3 as published
-by the Free Software Foundation. See LICENSE for the complete terms.
-This program comes WITHOUT ANY WARRANTY; without even the implied warranty
-of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-
-The corresponding source is supplied as the separate matching
-Cockpit-Excelence-VERSION-Source.zip asset at:
-https://github.com/Radio-Active1991/Cockpit-Excelence/releases
-
-Created by Radio-Active1991 with development, debugging, original model
-and documentation assistance from OpenAI ChatGPT / Codex.
-
-Flyout, MelonLoader, Mi8, their binaries and third-party reference images
-are not distributed by this project. Their owners retain their rights.
+Complete corresponding source: Cockpit-Excelence-0.4.2-Source.zip.
+Optional developer SDK: Cockpit-Excelence-0.4.2-SDK.zip (not the complete source).
+https://github.com/Radio-Active1991/Cockpit-Excelence/releases/tag/v0.4.2
+Stable technical DLL/part/storage IDs are preserved. See LICENSE.
+No game/loader/foreign-mod binary, private log or reference photo bundled.

@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <LangVersion>10.0</LangVersion>
+    <Nullable>disable</Nullable>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <FlyoutMfdAssembly Condition="'$(FlyoutMfdAssembly)' == ''">$(MSBuildThisFileDirectory)../lib/FlyoutMFD.dll</FlyoutMfdAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="DisplayProviderExample.cs" />
+    <Compile Include="Examples/*.cs" />
+    <Reference Include="FlyoutMFD">
+      <HintPath>$(FlyoutMfdAssembly)</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+</Project>
