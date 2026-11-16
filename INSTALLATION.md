@@ -1,49 +1,61 @@
-# Cockpit Excelence 0.4.2 — Installation
+# Cockpit Excelence0.4.3 — Installation / Installation
 
 ## Deutsch
 
-Cockpit Excelence 0.4.2 für Flyout 0.2504 / MelonLoader 0.7.1 (.NET 6 IL2CPP). MelonLoader und die passende .NET-6-Desktop-Runtime müssen eingerichtet sein. Interne Testversion: Das Spielpaket enthält die DLL und alle 68 Parts sowie diese Anleitung und GPL-Hinweise. Quellcode, Tests, Modellwerkzeuge und SDK liegen ausschließlich in der getrennten Source.zip. Flyout 0.2504 wurde auf API-Ebene offline geprüft; native Darstellung und Zielbewegung sind noch nicht im Spiel abgenommen.
+Für Flyout0.2504 / MelonLoader0.7.1 (.NET6 IL2CPP, Windows x64).
+MelonLoader und die passende .NET6-Desktop-Runtime müssen eingerichtet sein.
 
-1. Flyout vollständig schließen. Bisherige Mods/FlyoutMFD.dll und die zu diesem Mod gehörenden Parts außerhalb ihrer Ladeordner sichern. Eigene Layouts und Flugzeugdateien ebenfalls sichern.
-2. Mods/FlyoutMFD.dll aus dem Paket in den Mods-Ordner der Spielinstallation kopieren. Eine vorhandene DLL ersetzen; keine zweite umbenannte Kopie parallel laden.
-3. Alle Ordner aus Parts in %USERPROFILE%/AppData/LocalLow/Stonext Games/Flyout/Mods/Parts kopieren und gleichnamige Dateien ersetzen. Ordner wie Flyout MFD Studio Fa18 behalten absichtlich ihre bisherigen Namen. Nicht die gesamte Parts-Bibliothek löschen.
-4. Layouts unter UserData/FlyoutMFD, editor-settings.json und Flugzeugdateien behalten. Die Namensänderung benötigt kein neues Cockpit. Schrauben bleiben bei ausdrücklich gespeicherter Auswahl erhalten; für neue Konfigurationen sind sie aus.
-5. Flyout selbst starten und die geänderten Teile an einem gesicherten Flugzeug prüfen. Zum Rückwechsel das Spiel schließen und gesicherte DLL sowie zugehörige Parts gemeinsam wiederherstellen.
+1. Flyout vollständig schließen. Alte FlyoutMFD.dll, eigene Mod-Parts und
+   Cockpitlayouts/Flugzeugdateien außerhalb der Ladeordner sichern.
+2. Mods/FlyoutMFD.dll aus dem ZIP in den Mods-Ordner der Spielinstallation
+   kopieren und die bisherige DLL ersetzen. Keine zweite umbenannte Kopie laden.
+3. Alle70Ordner aus Parts nach
+   %USERPROFILE%/AppData/LocalLow/Stonext Games/Flyout/Mods/Parts kopieren.
+   Gleichnamige Dateien ersetzen; andere Parts nicht löschen. Die bisherigen
+   Namen Flyout MFD Studio... bleiben für gespeicherte Flugzeuge absichtlich.
+4. UserData/FlyoutMFD, editor-settings.json und Craft/.../FlyoutMFD/layout.json
+   beibehalten. Flugzeuge/Seiten/Belegungen müssen nicht neu erstellt werden.
+5. Flyout selbst starten. Cockpit-Editor: Strg+F8 oder Stock-Teilmenü.
 
-Kameras sind ausdrücklich WIP. Es gibt keine bestätigte FPS-Steigerung oder vollständige Ingame-Abnahme aus den Offline-Prüfungen. Codex hat dieses Paket weder installiert noch das Spiel gestartet. Offizielle Loader-Anleitung: https://github.com/LavaGang/MelonLoader .
-
-DLL und Parts gemeinsam aktualisieren. Layouts, UserData und Flugzeugdateien
-behalten. Die technischen Kennungen und Speicherpfade sind unverändert.
-Das Runtime-ZIP enthält alle zum Spielen benötigten Mod-Dateien und Hinweise.
-Quellcode und SDK sind getrennte ZIPs. Das SDK ist nur für Entwickler;
-seine Referenz-DLL nicht als zweite Kopie ins Spiel installieren.
+Cockpitlayout-Änderungen speichern automatisch und werden vor Launch gesichert.
+Flyouts Flugzeug-Save bleibt für Teileposition, Größe und neue Achsen nötig.
+Neue HUDs starten mit10Grad FoV; vorhandene Werte werden erhalten.
+Trimrad: Displays > PART APPEARANCE bietet getrennte Scale / number color und
+Pointer / rim mark color sowie Show handwheel numeric value für die untere Zahl.
+Anzeige/Gehäuse und Kurbel sind unabhängig ausblendbar; Spiegelung und Green
+band from/to bleiben verfügbar. Slider/Bogenhebel/Trimrad verwenden vorhandene
+Achsen-/Systemausgänge. EO-Filter und Zoom sind unter Kamera/EO-Ausgängen.
 
 ## English
 
-Cockpit Excelence 0.4.2 for Flyout 0.2504 / MelonLoader 0.7.1 (.NET 6 IL2CPP). Install MelonLoader and the matching .NET 6 Desktop Runtime first. Internal test version: the runtime package contains the DLL, all 68 parts, this guide and GPL notices. Source, tests, model tools and SDK are exclusively in the separate Source.zip. Flyout0.2504 compatibility was inspected offline; native rendering and target motion are not yet accepted in flight.
+Requires Flyout0.2504 / MelonLoader0.7.1 (.NET6 IL2CPP, Windows x64) and the
+matching .NET6 Desktop Runtime.
 
-1. Close Flyout completely. Back up Mods/FlyoutMFD.dll and this mod’s existing part folders outside their loading directories. Also back up your layouts and aircraft saves.
-2. Copy Mods/FlyoutMFD.dll into the game installation’s Mods folder, replacing the old DLL. Do not load a second renamed copy.
-3. Copy every folder from Parts into %USERPROFILE%/AppData/LocalLow/Stonext Games/Flyout/Mods/Parts and replace matching files. Names such as Flyout MFD Studio Fa18 deliberately remain unchanged. Do not delete your entire parts library.
-4. Preserve layouts in UserData/FlyoutMFD, editor-settings.json and aircraft saves. Renaming the mod does not require rebuilding your cockpit. Explicitly saved screw visibility is retained; new configurations hide screws.
-5. Start Flyout yourself and check the revised parts on a backed-up aircraft. To revert, close the game and restore the saved DLL and matching parts together.
+1. Close Flyout and back up the prior DLL, this mod's Parts and layouts/aircraft
+   outside the loading folders.
+2. Replace Mods/FlyoutMFD.dll in your game installation's Mods folder.
+   Never load a second renamed copy.
+3. Copy all70Parts folders into
+   %USERPROFILE%/AppData/LocalLow/Stonext Games/Flyout/Mods/Parts.
+   Replace matching files; keep other mods' parts. Old technical names remain.
+4. Keep UserData/FlyoutMFD, editor-settings.json and aircraft layout sidecars.
+5. Start Flyout yourself. Open the cockpit editor with Ctrl+F8 or the stock menu.
 
-Cameras are explicitly WIP. Offline checks establish neither a measured FPS improvement nor full in-game acceptance. Codex has not installed this package or started the game. Official loader instructions: https://github.com/LavaGang/MelonLoader .
+Cockpit layouts save automatically and flush before launch. Native aircraft
+Save is still required for placement, size and new axes. New HUDs default to
+10degree FoV; saved custom values remain. Trim-wheel scale/number and pointer/
+rim colors are separate under Displays > PART APPEARANCE; Show handwheel numeric
+value hides the bottom number. Indicator/bow and crank hide independently.
+Mirror/green band settings remain. Slider/arc/wheel use existing outputs.
 
-Update DLL and Parts together. Retain layouts, UserData and aircraft saves.
-Technical IDs/storage paths remain stable. This runtime ZIP contains the
-required game files and notices. Complete source and optional developer SDK
-are separate archives. Do not install a second host DLL from the SDK.
+## Source, license and limits
 
-## Documentation and limitations
+Complete source, tests, original models/tools, bilingual help and developer
+SDK/examples are in Cockpit-Excelence-0.4.3-Source.zip (Source/SDK). Players
+need only the gamefiles ZIP. SHA-256 hashes are written in the GitHub release
+text; no separate SDK or checksum asset is required.
 
-https://github.com/Radio-Active1991/Cockpit-Excelence/wiki
-
-New: display-provider SDK v1 with simple examples, native machinery/gearbox
-sources and physical shifters, per-UFC coordinate formats and revised models.
-Configure image resolution/refresh under Settings and HUD angular scale in
-the HUD widget; see wiki. Cameras/FLIR/native GPS positioning remain WIP.
-No FPS improvement is promised. Offline checks and exact hashes accompany
-the release; this build is not installed or launched by Codex.
-
-GPL-3.0. Created with OpenAI ChatGPT / Codex assistance. See LICENSE/NOTICE.
+Public UI hides internal comparison/diagnostic settings. Camera/FLIR, filters,
+Mi8 video and native GPS targeting remain WIP. Controlled offline checks do not
+establish native GPU/physics behavior or FPS gains. No game was started by Codex.
+GPL-3.0; created with extensive OpenAI ChatGPT / Codex assistance.

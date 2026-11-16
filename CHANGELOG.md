@@ -1,3 +1,24 @@
+# Cockpit Excelence0.4.3
+
+- Automatic live editor-part registration and cockpit-layout saving/pre-launch
+  flush. New HUDs default to10degrees; saved FoV/layouts/bindings remain.
+- Own EO BW/NV filters, gain/contrast and command zoom for MFD/buttons/knobs/
+  sliders. Cameras/FLIR/filter/native GPS movement remain WIP.
+- Revised slider, arc lever with crossbar/ball/disc and approved smooth closed
+  trim wheel. Optional mirrored indicator/crank, green from/to in output values.
+- Separate scale/number and pointer/rim colors; optional bottom numeric value.
+- Reuse subpixel/rounded control imagery, share owned identical material slots
+  within each control and compute rotation once per pose. Functional precision
+  retained; no measured game FPS improvement claimed.
+- Reload reads the primary sidecar explicitly; failed reads keep open edits.
+  Loaded layouts override stale native appearance metadata; selection retained.
+- Bilingual in-game help/wiki updated. Public diagnostic/comparison UI hidden.
+- Only gamefiles and complete Source ZIP assets; SDK/examples inside Source,
+  SHA-256 only in release text. GPL-3.0 and OpenAI ChatGPT/Codex credit explicit.
+-11793controlled checks/17suites,215compiled contracts,911native refs/14normal
+  hooks,9445proxy paths,222control-model and586UFC checks pass. Native GPU/FPS
+  and physical integration remain separate in-game acceptance.
+
 # Cockpit Excelence 0.4.2
 
 - Public Display API v1 and External mod content widgets. Separate SDK ZIP with three simple providers, independent consumer check, build template and optional loader-demo source. Registry, drawing/RGBA layers, fit modes, lifetime/error handling, budgets and demand hints documented in the expanded wiki.

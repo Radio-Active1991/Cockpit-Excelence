@@ -1,17 +1,17 @@
-# Cockpit Excelence 0.4.2 — Display SDK v1
+# Cockpit Excelence 0.4.3 — Display SDK v1
 
 This SDK lets another mod supply images, text and drawing commands to a normal
 Cockpit Excelence MFD/UFC page. Download the matching Runtime ZIP separately.
-The SDK ZIP is for mod authors; players do not install it into the game.
+The SDK is included in the complete Source ZIP under Source/SDK; players need only the runtime ZIP.
 
 Created with OpenAI ChatGPT / Codex assistance. GPL-3.0; see LICENSE/NOTICE.
 
 ## Quick start
 
-1. Install Cockpit Excelence **0.4.2** normally, including Mods and Parts.
-2. Reference the SDK's `lib/FlyoutMFD.dll` when compiling your producer. Its
+1. Install Cockpit Excelence **0.4.3** normally, including Mods and Parts.
+2. Reference the matching installed or freshly compiled `FlyoutMFD.dll` when compiling your producer. Its
    version is the same as the runtime DLL; do not redistribute a second copy.
-3. Copy a provider class from `SDK/Examples`, or use `DisplayProviderExample.cs`.
+3. Copy a provider class from `Source/SDK/Examples`, or use `DisplayProviderExample.cs`.
    Create one instance at mod startup, call its Tick method from your update
    callback and Dispose it when your mod unloads. Keep the instance alive.
 4. In the cockpit editor, select a page, add **External mod content**, choose
@@ -96,7 +96,7 @@ contract, limits, errors and lifetime rules, and the [wiki examples](https://git
 
 ## Deutsch: Kurzablauf
 
-Das SDK-ZIP ist für Mod-Entwickler; zum Spielen reicht das Runtime-ZIP.
+Das SDK liegt in Source.zip unter Source/SDK und ist für Mod-Entwickler; zum Spielen reicht das Spielpaket.
 Den passenden Host referenzieren, eine Quelle einmal registrieren, Bilder
 oder Zeichenbefehle veröffentlichen und die Quelle im Widget **External mod
 content** auswählen. Die Anbieterinstanz bis zum Entladen aufbewahren und
@@ -105,5 +105,3 @@ Keine zweite FlyoutMFD.dll mit dem eigenen Mod verteilen. Die drei oben
 genannten Beispielquellen und die ausführlichen Wiki-Beispiele helfen beim
 Einstieg. Bildqualität und Aktualisierungsgrenzen stellt der Anwender im
 Cockpit-Editor ein; Kameras/FLIR bleiben WIP.
-
-For a repository checkout, run from its root: `pwsh -File ./docs/SDK/Run-Smoke.ps1 -HostDLL ./Mods/FlyoutMFD.dll`. The default lib path otherwise refers to the standalone SDK ZIP layout.

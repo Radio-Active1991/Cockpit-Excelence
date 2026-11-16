@@ -1,10 +1,8 @@
-Cockpit Excelence 0.4.2
-Copyright (C) 2026 Radio-Active1991 and contributors. GPL-3.0.
-Created with extensive development, debugging, original-model and
-documentation assistance from OpenAI ChatGPT / Codex.
-
-Complete corresponding source: Cockpit-Excelence-0.4.2-Source.zip.
-Optional developer SDK: Cockpit-Excelence-0.4.2-SDK.zip (not the complete source).
-https://github.com/Radio-Active1991/Cockpit-Excelence/releases/tag/v0.4.2
-Stable technical DLL/part/storage IDs are preserved. See LICENSE.
-No game/loader/foreign-mod binary, private log or reference photo bundled.
+Cockpit Excelence0.4.3
+Copyright (C)2026 Radio-Active1991 and contributors. GPL-3.0.
+Created with extensive programming, debugging, original-model and documentation
+assistance from OpenAI ChatGPT / Codex.
+Complete corresponding source: Cockpit-Excelence-0.4.3-Source.zip
+https://github.com/Radio-Active1991/Cockpit-Excelence
+Stable technical FlyoutMFD.dll/part/storage IDs retained.
+No foreign game/loader/mod binaries are included. Camera/FLIR remains WIP.

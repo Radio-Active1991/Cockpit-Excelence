@@ -37,3 +37,14 @@ newmtl LampAmber
 Kd 0.085 0.052 0.01
 Ks 0.65 0.65 0.65
 Ns 100
+
+newmtl Plate
+Kd 0.10 0.125 0.135
+Ks 0.4 0.4 0.4
+Ns 65
+newmtl Grip
+Kd 0.065 0.073 0.074
+Ks 0.45 0.45 0.45
+Ns 55
+newmtl Legend
+Kd 0.92 0.94 0.91
